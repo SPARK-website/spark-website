@@ -1,4 +1,4 @@
-## Hiii👋 So, I'm currently working on my website, it's called SPARK, and it's a website for teens and young adults to learn basic health and safety tips. Please check it out!!💖
+## Hiii👋 So, I'm currently working on my website, it's called SPARK, and it's a website for teens and young adults to learn basic health and safety tips. Please check it out!!💖This is my first website, btw, so please ignore any issues and submit feedback (there's a link on the bottom of the page) tyy!!!
 
 <!--
 **SPARK-website/spark-website** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
