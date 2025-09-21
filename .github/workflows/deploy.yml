@@ -1,0 +1,39 @@
+name: Deploy to GitHub Pages
+
+on:
+push:
+branches:
+- main # Change this to your branch name, e.g., 'master' if needed
+
+permissions:
+contents: read
+pages: write
+id-token: write
+
+concurrency:
+group: "pages"
+cancel-in-progress: true
+
+jobs:
+build:
+runs-on: ubuntu-latest
+steps:
+- name: Checkout your repository
+uses: actions/checkout@v3
+
+  - name: Upload Pages artifact
+    uses: actions/upload-pages-artifact@v2
+    with:
+      # This specifies the directory to upload. A "." means the root of your repository.
+      path: '.'
+
+deploy:
+environment:
+name: github-pages
+url: ${{ steps.deployment.outputs.page_url }}
+runs-on: ubuntu-latest
+needs: build
+steps:
+- name: Deploy to GitHub Pages
+id: deployment
+uses: actions/deploy-pages@v3
